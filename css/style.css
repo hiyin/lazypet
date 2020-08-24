@@ -346,7 +346,7 @@ header {
   clear: both; }
   #colorlib-hero .hero-flex {
     width: 100%;
-    z-index: 0;
+    z-index: -1;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -357,20 +357,59 @@ header {
     -webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap; }
     #colorlib-hero .hero-flex .col-three-forth {
+
       width: 60%;
       z-index: -1;
       float: left;
-      position: relative; }
+      position: relative;   }
+      
+       @media screen and (max-width: 480px) {
+        #colorlib-hero .hero-flex .col-three-forth{
+          width: 100%;
+          z-index: -1;
+          float: left;
+          position: relative; }
+
+    }
+    
     #colorlib-hero .hero-flex .col-one-forth {
       width: 40%;
       float: left;
       position: relative; }
+     
+      @media screen and (max-width: 480px) {  
+        #colorlib-hero .hero-flex .col-one-forth {
+
+          width: 0%;
+          float: left;
+          position: relative; }
+
+      } 
     #colorlib-hero .hero-flex .display-t {
       display: table;
-      width: 100%; }
+      width: 100%; 
+ 
+    
+    }
+
+
     #colorlib-hero .hero-flex .display-tc {
       display: table-cell;
-      vertical-align: middle; }
+      vertical-align: middle; 
+
+    }
+     
+      @media screen and (max-width: 480px) {    
+    #colorlib-hero .hero-flex .display-tc {
+      display: table-cell;
+     
+      
+
+      
+      
+    }
+  }
+     
     #colorlib-hero .hero-flex .number {
       position: absolute;
       bottom: 0;
@@ -383,10 +422,27 @@ header {
       @media screen and (max-width: 768px) {
         #colorlib-hero .hero-flex .number {
           display: none; } }
+
+
+    #colorlib-hero .hero-flex .text-inner {
+            display: block;
+            width: 100%;
+            margin-left: -5em; } 
+            
+    
+    /* @media screen and (max-width: 480px) {  
     #colorlib-hero .hero-flex .text-inner {
       display: block;
       width: 100%;
-      margin-left: -5em; }
+      background:#d43f3a;
+      margin-left: 2em; 
+      margin-right: -5em; 
+     
+    
+    }
+  }  */
+
+
       #colorlib-hero .hero-flex .text-inner h2 {
         font-size: 58px;
         font-weight: 700;
@@ -394,12 +450,25 @@ header {
         @media screen and (max-width: 768px) {
           #colorlib-hero .hero-flex .text-inner h2 {
             font-size: 24px; } }
+
+        @media screen and (max-width: 480px) {
+          #colorlib-hero .hero-flex .text-inner h2 {
+            font-size: 20px; } }
+
       #colorlib-hero .hero-flex .text-inner .tag {
         display: block;
         letter-spacing: 7px;
         margin-bottom: 15px;
         text-transform: uppercase;
         font-size: 13px; }
+        
+        @media screen and (max-width: 480px) {
+          #colorlib-hero .hero-flex .text-inner .tag {
+          font-size:0;
+          }
+        }
+
+
       #colorlib-hero .hero-flex .text-inner .desc {
         padding-right: 3em;
         position: relative; }
@@ -410,9 +479,17 @@ header {
             width: 100%; } }
         @media screen and (max-width: 480px) {
           #colorlib-hero .hero-flex .text-inner .desc {
+            
             padding: 1em;
-            background: #fff;
-            width: 140%; } }
+            background:transparent;
+            border-left:1px solid #000;
+        
+            margin-left:-2em;
+          
+            width: 140%; 
+            
+            } 
+          }
         #colorlib-hero .hero-flex .text-inner .desc:after {
           position: absolute;
           top: 30px;
@@ -425,7 +502,8 @@ header {
           @media screen and (max-width: 768px) {
             #colorlib-hero .hero-flex .text-inner .desc:after {
               opacity: 0; } }
-      #colorlib-hero .hero-flex .text-inner .btn-view {
+              
+      #colorlib-hero .hero-flex .text-inner .btn-view{
         font-size: 13px;
         letter-spacing: 7px;
         color: #000;
@@ -436,6 +514,15 @@ header {
         @media screen and (max-width: 768px) {
           #colorlib-hero .hero-flex .text-inner .btn-view {
             letter-spacing: 2px; } }
+        @media screen and (max-width: 480px) {
+          #colorlib-hero .hero-flex .text-inner .btn-view {
+
+            white-space: nowrap;
+          
+            } 
+          }
+
+
   #colorlib-hero .owl-theme .owl-controls {
     position: absolute;
     bottom: 0;
@@ -488,8 +575,25 @@ header {
     width: 50%;
     display: block;
     overflow: scroll; }
+
+
+    
   .about-flex .about-img {
-    z-index: -1; }
+    z-index: -1; 
+
+  }
+  @media screen and (max-width: 480px) {
+    .about-flex .col-half {
+      width: 100%;
+    }
+
+    .about-flex .about-img {
+      visibility: hidden;
+  
+    }
+  }
+
+
   .about-flex .display-t {
     display: table; }
     .about-flex .display-t .display-tc {
@@ -581,10 +685,12 @@ header {
 .about-img,
 .work-img,
 .gallery {
+
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative; 
+  }
 
 .work-entry-flex {
   display: -webkit-box;
@@ -600,17 +706,49 @@ header {
   margin-bottom: 7em; }
   .work-entry-flex .col-three-forth {
     width: 55%; }
+
+    @media screen and (max-width: 480px) {
+      .work-entry-flex .col-three-forth {
+        width: 100%;
+      }
+    }
+
+
   .work-entry-flex .col-one-forth {
     width: 45%; }
+
+    @media screen and (max-width: 480px) {
+
+      .work-entry-flex .col-one-forth {
+        width: 0%; }
+    }
+
+
   .work-entry-flex .display-t {
     display: table; }
   .work-entry-flex .display-tc {
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle; 
+   
+  
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .work-entry-flex .display-tc {
+      visibility: hidden;
+    }
+  
+  
+  }
+
+
   .work-entry-flex .text-inner-right {
     text-align: right;
     margin-right: 0;
-    padding-left: 0; }
+    padding-left: 0; 
+  
+  }
     @media screen and (max-width: 768px) {
       .work-entry-flex .text-inner-right {
         text-align: left;
