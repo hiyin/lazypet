@@ -311,6 +311,7 @@ header {
   header .colorlib-navbar-brand {
     float: left; }
     header .colorlib-navbar-brand .colorlib-logo {
+      
       font-size: 24px;
       text-transform: uppercase;
       color: #000;
@@ -318,12 +319,26 @@ header {
       font-weight: 700;
       letter-spacing: 10px;
       display: block;
-      text-align: center; }
+      text-align: center; 
+    
+    }
+
+    header .colorlib-navbar-brand .colorlib-img {
+      width: 25%;
+      float: left;
+      @media screen and (max-width: 480px) {
+       
+      }
+      
+    }
+
       header .colorlib-navbar-brand .colorlib-logo:hover {
         text-decoration: none !important; }
       header .colorlib-navbar-brand .colorlib-logo:active, header .colorlib-navbar-brand .colorlib-logo:focus {
         outline: none;
         text-decoration: none; }
+
+    
 
 #colorlib-services,
 #colorlib-contact,
@@ -710,16 +725,21 @@ header {
     @media screen and (max-width: 480px) {
       .work-entry-flex .col-three-forth {
         width: 100%;
+        z-index:-9;
+       
       }
     }
 
 
   .work-entry-flex .col-one-forth {
-    width: 45%; }
+    width: 45%; 
+    
+  }
 
     @media screen and (max-width: 480px) {
 
       .work-entry-flex .col-one-forth {
+      
         width: 0%; }
     }
 
@@ -735,8 +755,18 @@ header {
 
   @media screen and (max-width: 480px) {
 
+    .work-entry-flex .display-t {
+      margin-left: -9em;
+ 
+    }
+
     .work-entry-flex .display-tc {
-      visibility: hidden;
+      /* visibility: hidden; */
+      z-index:1;
+      vertical-align: bottom; 
+      
+
+      
     }
   
   
@@ -753,13 +783,42 @@ header {
       .work-entry-flex .text-inner-right {
         text-align: left;
         margin-left: -4em; } }
+
+       
+
+
+          
+
+
   .work-entry-flex .text-inner-left {
     text-align: left;
     margin-left: -4em; }
+
+
+    @media screen and (max-width: 480px) {
+      .work-entry-flex .text-inner-left {
+        opacity: 0.7;
+        margin-bottom: -7em;
+       
+      } 
+
+      }
   .work-entry-flex .text-inner {
     display: block;
     padding: 3em;
     background: #fff; }
+    @media screen and (max-width: 480px) {
+      .work-entry-flex .text-inner-right {
+        opacity: 0.7;
+        margin-bottom: -7em;
+    
+      } 
+
+      }
+
+
+
+
     @media screen and (max-width: 768px) {
       .work-entry-flex .text-inner {
         padding: 1em; } }
